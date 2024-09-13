@@ -1,0 +1,136 @@
+Sure, I'll create a LaTeX document that explains the fundamentals of Graph Theory using the provided template.
+
+```latex
+\documentclass{beamer}
+
+% Theme setup
+\usetheme{default}
+\usepackage{graphicx}
+
+% Color setup
+\setbeamercolor{frametitle}{bg=blue,fg=black}  % Header background blue, title color black
+\setbeamercolor{title in head/foot}{bg=blue,fg=white}
+
+% Remove color from the footer
+\setbeamercolor{footline}{bg=,fg=black}  % No background color for the footer, set text color to black
+
+% Logo setup (right side of the header, with fine adjustments for vertical and horizontal positioning)
+\setbeamertemplate{frametitle}{
+	\vspace{0.2cm}
+	\hbox{
+		\begin{beamercolorbox}[wd=\paperwidth,ht=1cm,dp=0.3cm]{frametitle}
+			\hspace{0.5cm} % Adjust horizontal space from the left
+			\textbf{\textcolor{black}{\insertframetitle}} % Slide title in bold and black
+			\hfill
+			\raisebox{-0.1cm}{\includegraphics[height=0.9cm]{logo.png}}  % Adjust the raisebox value to move the logo up/down
+			\hspace{0.5cm} % Adjust horizontal space from the right
+		\end{beamercolorbox}
+	}
+}
+
+% Footer setup for slide number with total page number (adjustable vertical and horizontal position)
+\setbeamertemplate{footline}{
+	\hbox{
+		\hfill
+		\raisebox{0.2cm}{ % Adjust vertical positioning (positive value moves it up, negative moves it down)
+			\hspace*{11.8cm}  % Adjust horizontal positioning (move left or right)
+			\textbf{\insertframenumber}/\inserttotalframenumber % Add page number and total number of slides
+		}
+		\hfill
+	}
+}
+
+\begin{document}
+	
+	% Title Slide
+	\begin{frame}
+		\title{Fundamentals of Graph Theory}
+		\subtitle{}
+		\author{Ragupathi M}
+		\institute{Ramanujan Computing Centre}
+		\titlepage
+	\end{frame}
+	
+	% Slide: Introduction to Graph Theory
+	\begin{frame}
+		\frametitle{Introduction to Graph Theory}
+		\begin{itemize}
+			\item Graph Theory is a field of mathematics about how points (nodes) are connected by lines (edges).
+			\item Graphs are used to model pairwise relations between objects.
+			\item Applications include computer science, biology, social sciences, and more.
+		\end{itemize}
+	\end{frame}
+	
+	% Slide: Basic Definitions
+	\begin{frame}
+		\frametitle{Basic Definitions}
+		\begin{itemize}
+			\item \textbf{Graph}: A set of vertices (nodes) and edges (lines connecting nodes).
+			\item \textbf{Vertex (Node)}: A fundamental unit by which graphs are formed.
+			\item \textbf{Edge (Connection/Link)}: A line connecting two vertices in a graph.
+		\end{itemize}
+		\begin{figure}
+			\includegraphics[width=0.5\linewidth]{graph.png}
+			\caption{An example of a graph.}
+		\end{figure}
+	\end{frame}
+	
+	% Slide: Types of Graphs
+	\begin{frame}
+		\frametitle{Types of Graphs}
+		\begin{itemize}
+			\item \textbf{Undirected Graph}: Edges have no direction.
+			\item \textbf{Directed Graph (Digraph)}: Edges have a direction.
+			\item \textbf{Weighted Graph}: Edges have weights (values).
+		\end{itemize}
+	\end{frame}
+	
+	% Slide: Graph Representations
+	\begin{frame}
+		\frametitle{Graph Representations}
+		\begin{itemize}
+			\item \textbf{Adjacency Matrix}: A square matrix used to represent a finite graph.
+			\item \textbf{Adjacency List}: A collection of lists or arrays used to represent a graph.
+		\end{itemize}
+		\begin{figure}
+			\includegraphics[width=0.6\linewidth]{adjacency_matrix.png}
+			\caption{Example of an Adjacency Matrix.}
+		\end{figure}
+	\end{frame}
+	
+	% Slide: Fundamental Theorems
+	\begin{frame}
+		\frametitle{Fundamental Theorems}
+		\begin{itemize}
+			\item \textbf{Euler's Theorem}: Conditions for Eulerian paths and circuits.
+			\item \textbf{Hamiltonian Path}: Visits each vertex exactly once.
+			\item \textbf{Graph Coloring}: Coloring vertices so that no two adjacent vertices share the same color.
+		\end{itemize}
+	\end{frame}
+	
+	% Slide: Applications of Graph Theory
+	\begin{frame}
+		\frametitle{Applications of Graph Theory}
+		\begin{itemize}
+			\item \textbf{Computer Networks}: Modeling of LANs and WANs.
+			\item \textbf{Social Networks}: Representation of relationships.
+			\item \textbf{Biology}: Networks of neurons or protein interactions.
+			\item \textbf{Transportation}: Route optimization.
+		\end{itemize}
+	\end{frame}
+	
+	% Slide: Conclusion
+	\begin{frame}
+		\frametitle{Conclusion}
+		\begin{itemize}
+			\item Graph Theory provides essential tools for modeling and solving problems in various fields.
+			\item Understanding basic definitions and properties is crucial for progress in advanced topics.
+		\end{itemize}
+	\end{frame}
+	
+\end{document}
+```
+
+This LaTeX file presents the fundamentals of Graph Theory in a structured way, with slides covering the introduction, basic definitions, types of graphs, graph representations, fundamental theorems, applications, and a conclusion.
+
+Please make sure to have appropriate images (`graph.png` and `adjacency_matrix.png`) in the same directory or update the paths to your local images that will illustrate the concepts.
